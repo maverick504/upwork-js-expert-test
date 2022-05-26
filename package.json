@@ -5,10 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "css": "node-sass --include-path scss scss/styles.scss css/styles.css",
+    "babel": "babel --presets es2015 src/js/main.js -o js/main.js",
+    "start": "http-server",
+    "css": "node-sass --include-path scss src/scss/styles.scss css/styles.css",
     "watch": "nodemon -e scss -x 'npm run css'",
-    "lint": "eslint **/*.js",
-    "lint:fix": "eslint --fix **/*.js"
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "eslint --fix src/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +23,15 @@
   },
   "homepage": "https://github.com/maverick504/upwork-js-expert-test#readme",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
     "eslint": "^8.16.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "http-server": "^14.1.0",
     "node-sass": "^7.0.1",
     "nodemon": "^2.0.16",
     "prettier": "2.6.2"
