@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "css": "node-sass --include-path scss scss/styles.scss css/styles.css",
+    "watch": "nodemon -e scss -x 'npm run css'",
     "lint": "eslint **/*.js",
     "lint:fix": "eslint --fix **/*.js"
   },
@@ -20,6 +22,8 @@
   "homepage": "https://github.com/maverick504/upwork-js-expert-test#readme",
   "devDependencies": {
     "eslint": "^8.16.0",
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.16",
     "prettier": "2.6.2"
   }
 }
