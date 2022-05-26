@@ -1,3 +1,71 @@
-.some-class {
-    color: red;
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Roboto:wght@300&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 1rem;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+    &:not(:last-child) {
+        border-bottom: 1px solid #999;
+    }
+    .article--information-wrapper {
+        flex-grow: 1;
+        .article--category {
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            color: #0059bf;
+            margin-bottom: 0.5rem;
+        }
+        .article--headline {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: #000000;
+            margin-bottom: 0.5rem;
+        }
+        .article--standfirst {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 16px;
+            color: #606669;
+            margin-bottom: 0.5rem;
+        }
+    }
+    .article--thumbnail-wrapper {
+        margin-top: 1rem;
+        .article--thumbnail {
+            width: 100%;
+            height: auto;
+            margin: 0;
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    /* On small devices... */
+    .article {
+        flex-direction: row;
+        align-items: center;
+        .article--information-wrapper {
+            .article--category {
+                font-size: 18px;
+            }
+            .article--headline {
+                font-size: 31px;
+            }
+            .article--standfirst {
+                font-size: 19px;
+            }
+        }
+        .article--thumbnail-wrapper {
+            margin-top: 0;
+            margin-left: 1rem;
+            .article--thumbnail {
+                width: auto;
+            }
+        }
+    }
 }

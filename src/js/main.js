@@ -52,14 +52,15 @@ function genHtmlArticles (data) {
 
 // Generates HTML for ONE article.
 function genHtmlOneArticle (article) {
-  const code = `<div>
-        <div>
-            <div>${article.primarySectionRouteName}</div>
-            <div>${article.headline}</div>
-            <div>${article.standfirst}</div>
+  const code = `<div class="article">
+        <div class="article--information-wrapper">
+            <div class="article--category">${article.primarySectionRouteName}</div>
+            <div class="article--headline">${article.headline}</div>
+            <div class="article--standfirst">${article.standfirst}</div>
         </div>
-        <div>
+        <div class="article--thumbnail-wrapper">
             <img
+                class="article--thumbnail"
                 src="${article.thumbnail.src}"
                 title="${article.thumbnail.title}"
                 width="${article.thumbnail.width}"
