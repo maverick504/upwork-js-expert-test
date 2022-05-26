@@ -1,0 +1,25 @@
+{
+  "name": "js-expert-test",
+  "version": "1.0.0",
+  "description": "JS expert test for a job on UpWork",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint **/*.js",
+    "lint:fix": "eslint --fix **/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maverick504/upwork-js-expert-test.git"
+  },
+  "author": "Emiliano Jaimes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maverick504/upwork-js-expert-test/issues"
+  },
+  "homepage": "https://github.com/maverick504/upwork-js-expert-test#readme",
+  "devDependencies": {
+    "eslint": "^8.16.0",
+    "prettier": "2.6.2"
+  }
+}
